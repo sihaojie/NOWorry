@@ -19,8 +19,11 @@
 		DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */; };
 		DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B21C46279300EA9B30 /* FourthViewController.swift */; };
 		DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */; };
-		DFEF20B71C46287600EA9B30 /* ShjBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */; };
 		DFEF20BC1C462B7000EA9B30 /* ReportDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */; };
+		DFEF20C81C463B6000EA9B30 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEF20C71C463B6000EA9B30 /* CoreFoundation.framework */; };
+		DFEF20CC1C46427400EA9B30 /* ShjSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */; };
+		DFEF20CE1C46429400EA9B30 /* ShjSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */; };
+		DFEF20D01C46695800EA9B30 /* SHJdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20CF1C46695800EA9B30 /* SHJdelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +41,11 @@
 		DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		DFEF20B21C46279300EA9B30 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShjBaseViewController.swift; sourceTree = "<group>"; };
-		DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShjBaseViewController.xib; sourceTree = "<group>"; };
 		DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDailyListViewController.swift; sourceTree = "<group>"; };
+		DFEF20C71C463B6000EA9B30 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShjSegmentView.swift; sourceTree = "<group>"; };
+		DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShjSegmentView.xib; sourceTree = "<group>"; };
+		DFEF20CF1C46695800EA9B30 /* SHJdelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJdelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEF20C81C463B6000EA9B30 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +63,7 @@
 		DF712F071C45F1DE00916E6B = {
 			isa = PBXGroup;
 			children = (
+				DFEF20C71C463B6000EA9B30 /* CoreFoundation.framework */,
 				DF712F121C45F1DE00916E6B /* NOWorry */,
 				DF712F111C45F1DE00916E6B /* Products */,
 			);
@@ -97,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */,
-				DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */,
+				DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */,
+				DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */,
+				DFEF20CF1C46695800EA9B30 /* SHJdelegate.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -181,10 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEF20CE1C46429400EA9B30 /* ShjSegmentView.xib in Resources */,
 				DF712F201C45F1DE00916E6B /* LaunchScreen.storyboard in Resources */,
 				DF712F281C45F29B00916E6B /* Assets.xcassets in Resources */,
 				DF712F2B1C45F4CD00916E6B /* HomeTableViewCell.xib in Resources */,
-				DFEF20B71C46287600EA9B30 /* ShjBaseViewController.xib in Resources */,
 				DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */,
 				DF712F1B1C45F1DE00916E6B /* Main.storyboard in Resources */,
 			);
@@ -201,7 +211,9 @@
 				DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */,
 				DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */,
 				DF712F181C45F1DE00916E6B /* SecondViewController.swift in Sources */,
+				DFEF20CC1C46427400EA9B30 /* ShjSegmentView.swift in Sources */,
 				DF712F141C45F1DE00916E6B /* AppDelegate.swift in Sources */,
+				DFEF20D01C46695800EA9B30 /* SHJdelegate.swift in Sources */,
 				DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */,
 				DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */,
 				DF712F161C45F1DE00916E6B /* FirstViewController.swift in Sources */,
@@ -315,10 +327,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = NOWorry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sihaojie.NOWorry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -326,10 +342,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = NOWorry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sihaojie.NOWorry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

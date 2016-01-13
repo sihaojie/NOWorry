@@ -13,6 +13,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     var sourceArray:NSMutableArray!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
         reloadSoure()
         tableview!.registerNib(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier:"Cell" )
         tableview.reloadData()
@@ -40,7 +41,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             case "移动签到":
                 print("我的消息")
             case "工作日程":
-                self.navigationController?.pushViewController(ReportDailyListViewController(), animated: true)
+                self.navigationController?.pushViewController(ReportDailyListViewController.init(), animated: true)
             case "工作流程":
                 print("工作流程")
             case "公司发文":

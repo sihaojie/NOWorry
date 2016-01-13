@@ -12,10 +12,15 @@ class ReportDailyListViewController: ShjBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.Title_label.text = "工作日程"
+        Title_label.text = "工作日程"
+//        addSengmentView("自己",with: "公司")
+//        Mysegment.delegate = self
+        
         // Do any additional setup after loading the view.
     }
-
+    func segmentSelectSendBack(index: Int) {
+        print(index)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
