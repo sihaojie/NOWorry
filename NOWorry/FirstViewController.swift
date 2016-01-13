@@ -40,7 +40,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             case "移动签到":
                 print("我的消息")
             case "工作日程":
-                print("我的消息")
+                self.navigationController?.pushViewController(ReportDailyListViewController(), animated: true)
             case "工作流程":
                 print("工作流程")
             case "公司发文":
@@ -91,7 +91,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             return 3;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            var cell:HomeTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:  indexPath) as! HomeTableViewCell
+            let cell:HomeTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:  indexPath) as! HomeTableViewCell
             if sourceArray[indexPath.section].count == 1{
             cell.UpLine.hidden = false
             cell.Left_DownLine.hidden = true
@@ -130,12 +130,12 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             return 64.0
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-            var view:UIImageView = UIImageView.init(frame: CGRectMake(0.0, 0.0, self.view.bounds.size.width, 30.0))
+            let view:UIImageView = UIImageView.init(frame: CGRectMake(0.0, 0.0, self.view.bounds.size.width,30.0*self.view.bounds.size.width/320.0))
             view.image = UIImage.init(named:NSString.init(format:"First_section%d",section) as String)
             return view
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 30.0
+            return 30.0*self.view.bounds.size.width/320.0
     }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
             return 0.01

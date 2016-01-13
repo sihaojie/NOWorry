@@ -16,6 +16,11 @@
 		DF712F2B1C45F4CD00916E6B /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF712F291C45F4CD00916E6B /* HomeTableViewCell.xib */; };
 		DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */; };
 		DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF712F2E1C45F4F800916E6B /* MenuList.plist */; };
+		DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */; };
+		DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B21C46279300EA9B30 /* FourthViewController.swift */; };
+		DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */; };
+		DFEF20B71C46287600EA9B30 /* ShjBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */; };
+		DFEF20BC1C462B7000EA9B30 /* ReportDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		DF712F291C45F4CD00916E6B /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DF712F2E1C45F4F800916E6B /* MenuList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuList.plist; sourceTree = "<group>"; };
+		DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		DFEF20B21C46279300EA9B30 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShjBaseViewController.swift; sourceTree = "<group>"; };
+		DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShjBaseViewController.xib; sourceTree = "<group>"; };
+		DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDailyListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +72,11 @@
 		DF712F121C45F1DE00916E6B /* NOWorry */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF20BA1C462B1D00EA9B30 /* ReportDaily */,
+				DFEF20B81C462ADB00EA9B30 /* Base */,
 				DF712F2D1C45F4E900916E6B /* Source */,
+				DFEF20B91C462AF000EA9B30 /* Tabbar */,
 				DF712F131C45F1DE00916E6B /* AppDelegate.swift */,
-				DF712F151C45F1DE00916E6B /* FirstViewController.swift */,
-				DF712F171C45F1DE00916E6B /* SecondViewController.swift */,
-				DF712F291C45F4CD00916E6B /* HomeTableViewCell.xib */,
-				DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */,
 				DF712F191C45F1DE00916E6B /* Main.storyboard */,
 				DF712F271C45F29B00916E6B /* Assets.xcassets */,
 				DF712F1E1C45F1DE00916E6B /* LaunchScreen.storyboard */,
@@ -82,6 +91,36 @@
 				DF712F2E1C45F4F800916E6B /* MenuList.plist */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		DFEF20B81C462ADB00EA9B30 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */,
+				DFEF20B51C46287600EA9B30 /* ShjBaseViewController.xib */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		DFEF20B91C462AF000EA9B30 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DF712F151C45F1DE00916E6B /* FirstViewController.swift */,
+				DF712F171C45F1DE00916E6B /* SecondViewController.swift */,
+				DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */,
+				DFEF20B21C46279300EA9B30 /* FourthViewController.swift */,
+				DF712F291C45F4CD00916E6B /* HomeTableViewCell.xib */,
+				DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		DFEF20BA1C462B1D00EA9B30 /* ReportDaily */ = {
+			isa = PBXGroup;
+			children = (
+				DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */,
+			);
+			name = ReportDaily;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +184,7 @@
 				DF712F201C45F1DE00916E6B /* LaunchScreen.storyboard in Resources */,
 				DF712F281C45F29B00916E6B /* Assets.xcassets in Resources */,
 				DF712F2B1C45F4CD00916E6B /* HomeTableViewCell.xib in Resources */,
+				DFEF20B71C46287600EA9B30 /* ShjBaseViewController.xib in Resources */,
 				DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */,
 				DF712F1B1C45F1DE00916E6B /* Main.storyboard in Resources */,
 			);
@@ -157,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEF20BC1C462B7000EA9B30 /* ReportDailyListViewController.swift in Sources */,
+				DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */,
+				DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */,
 				DF712F181C45F1DE00916E6B /* SecondViewController.swift in Sources */,
 				DF712F141C45F1DE00916E6B /* AppDelegate.swift in Sources */,
+				DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */,
 				DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */,
 				DF712F161C45F1DE00916E6B /* FirstViewController.swift in Sources */,
 			);
@@ -308,6 +352,7 @@
 				DF712F261C45F1DE00916E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
