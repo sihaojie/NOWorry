@@ -13,6 +13,7 @@ let Window_width = UIScreen.mainScreen().bounds.size.width as CGFloat
 let Window_height = UIScreen.mainScreen().bounds.size.height as CGFloat
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+            .responseData { response in
+                print(response.request)
+                print(response.response)
+                print(response.result)
+        }
+        
+
         return true
     }
 

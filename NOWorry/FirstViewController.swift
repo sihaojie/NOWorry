@@ -13,6 +13,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     var sourceArray:NSMutableArray!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.navigationController?.navigationBarHidden = true
         reloadSoure()
         tableview!.registerNib(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier:"Cell" )
