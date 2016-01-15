@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ReportDailyListViewController: ShjBaseViewController {
 
@@ -15,7 +16,7 @@ class ReportDailyListViewController: ShjBaseViewController {
         Title_label.text = "工作日程"
 //        addSengmentView("自己",with: "公司")
 //        Mysegment.delegate = self
-        
+        print(login_Result.username)
         // Do any additional setup after loading the view.
     }
     func segmentSelectSendBack(index: Int) {

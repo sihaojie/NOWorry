@@ -5,35 +5,31 @@
 //  Created by 司浩杰 on 16/1/13.
 //  Copyright © 2016年 司浩杰. All rights reserved.
 //
-let IS_IOS7 = (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 7.0
-let IS_IOS8 = (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 8.0
-let IS_IOS9 = (UIDevice.currentDevice().systemVersion as NSString).doubleValue >= 9.0
-let IS_IOS7_down = (UIDevice.currentDevice().systemVersion as NSString).doubleValue < 7.0
-let Window_width = UIScreen.mainScreen().bounds.size.width as CGFloat
-let Window_height = UIScreen.mainScreen().bounds.size.height as CGFloat
+
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,SHJRequestDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
-            .responseData { response in
-                print(response.request)
-                print(response.response)
-                print(response.result)
-        }
-        
-
+//        SHJRequest().requestLoginwith(withUN: "", andPS: "", withDelegate: self, With:LOGINTAG)
+        SHJRequest().requestLogin(self,With:LOGINTAG)
         return true
     }
-
+    func requestFinished(result: JSON,with tag:Int) {
+        login_Result.nickname = result["nickname"].string
+        print(login_Result.nickname)
+    }
+    func requestFail(error: NSError, with tag: Int) {
+        
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

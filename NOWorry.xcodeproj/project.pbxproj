@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C204B2342F3DC78A0A3BCA6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1191062DB4D966618A2D45D /* Pods.framework */; };
+		DF444F991C48CE600091589D /* SHJLETFILE.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF444F981C48CE600091589D /* SHJLETFILE.swift */; };
 		DF712F141C45F1DE00916E6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF712F131C45F1DE00916E6B /* AppDelegate.swift */; };
 		DF712F161C45F1DE00916E6B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF712F151C45F1DE00916E6B /* FirstViewController.swift */; };
 		DF712F181C45F1DE00916E6B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF712F171C45F1DE00916E6B /* SecondViewController.swift */; };
@@ -18,6 +19,9 @@
 		DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */; };
 		DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF712F2E1C45F4F800916E6B /* MenuList.plist */; };
 		DF7AEC151C47972700AA2E06 /* Alamofire_Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7AEC141C47972700AA2E06 /* Alamofire_Result.framework */; };
+		DF7AEC231C47ADE000AA2E06 /* SHJRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */; };
+		DF8510F61C4895C900A95CF9 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8510F41C4895C900A95CF9 /* LoginResult.swift */; };
+		DF8510F81C48A21200A95CF9 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8510F71C48A21200A95CF9 /* SwiftyJSON.framework */; };
 		DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */; };
 		DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B21C46279300EA9B30 /* FourthViewController.swift */; };
 		DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B41C46287600EA9B30 /* ShjBaseViewController.swift */; };
@@ -32,6 +36,7 @@
 		6CFD57553874DB5BA3E681DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		89EB46BE830645FCEE1CB3DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B1191062DB4D966618A2D45D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF444F981C48CE600091589D /* SHJLETFILE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJLETFILE.swift; sourceTree = "<group>"; };
 		DF712F101C45F1DE00916E6B /* NOWorry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NOWorry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF712F131C45F1DE00916E6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF712F151C45F1DE00916E6B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		DF712F2A1C45F4CD00916E6B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DF712F2E1C45F4F800916E6B /* MenuList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuList.plist; sourceTree = "<group>"; };
 		DF7AEC141C47972700AA2E06 /* Alamofire_Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire_Result.framework; path = "Pods/../build/Debug-iphoneos/Alamofire_Result.framework"; sourceTree = "<group>"; };
+		DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJRequest.swift; sourceTree = "<group>"; };
+		DF8510F41C4895C900A95CF9 /* LoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		DF8510F71C48A21200A95CF9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		DF9C0D771C467AC000741F22 /* NOWorry-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NOWorry-Bridging-Header.h"; sourceTree = "<group>"; };
 		DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		DFEF20B21C46279300EA9B30 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8510F81C48A21200A95CF9 /* SwiftyJSON.framework in Frameworks */,
 				DF7AEC151C47972700AA2E06 /* Alamofire_Result.framework in Frameworks */,
 				DFEF20C81C463B6000EA9B30 /* CoreFoundation.framework in Frameworks */,
 				6C204B2342F3DC78A0A3BCA6 /* Pods.framework in Frameworks */,
@@ -72,6 +81,7 @@
 		1F5006BE40BBB3E5639A7ACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF8510F71C48A21200A95CF9 /* SwiftyJSON.framework */,
 				DF7AEC141C47972700AA2E06 /* Alamofire_Result.framework */,
 				B1191062DB4D966618A2D45D /* Pods.framework */,
 			);
@@ -106,6 +116,7 @@
 				DF712F2D1C45F4E900916E6B /* Source */,
 				DFEF20B91C462AF000EA9B30 /* Tabbar */,
 				DF712F131C45F1DE00916E6B /* AppDelegate.swift */,
+				DF8510F41C4895C900A95CF9 /* LoginResult.swift */,
 				DF712F191C45F1DE00916E6B /* Main.storyboard */,
 				DF712F271C45F29B00916E6B /* Assets.xcassets */,
 				DF712F1E1C45F1DE00916E6B /* LaunchScreen.storyboard */,
@@ -137,6 +148,8 @@
 				DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */,
 				DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */,
 				DFEF20CF1C46695800EA9B30 /* SHJdelegate.swift */,
+				DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */,
+				DF444F981C48CE600091589D /* SHJLETFILE.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -297,15 +310,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFEF20BC1C462B7000EA9B30 /* ReportDailyListViewController.swift in Sources */,
+				DF7AEC231C47ADE000AA2E06 /* SHJRequest.swift in Sources */,
 				DFEF20B61C46287600EA9B30 /* ShjBaseViewController.swift in Sources */,
 				DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */,
 				DF712F181C45F1DE00916E6B /* SecondViewController.swift in Sources */,
 				DFEF20CC1C46427400EA9B30 /* ShjSegmentView.swift in Sources */,
 				DF712F141C45F1DE00916E6B /* AppDelegate.swift in Sources */,
+				DF444F991C48CE600091589D /* SHJLETFILE.swift in Sources */,
 				DFEF20D01C46695800EA9B30 /* SHJdelegate.swift in Sources */,
 				DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */,
 				DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */,
 				DF712F161C45F1DE00916E6B /* FirstViewController.swift in Sources */,
+				DF8510F61C4895C900A95CF9 /* LoginResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

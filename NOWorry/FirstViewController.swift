@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableview: UITableView!
     var sourceArray:NSMutableArray!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBarHidden = true
 
+//        Alamofire.request(.POST, "http://web.ibumobile.com/head-ClientLogin-getLogin.do", parameters: ["data": "{\"userid\":\"\",\"channelid\":\"\",\"devicetype\":\"4\"}","authcode":"","password":"187e7c3ce1435f93ea030a8acfb08983","username":"69299a73775a799cb135cedd36497606","signiture":"918bd7616fc7e72ec4359cae9e29f650f8a34062"],ParameterEncoding : .URL,headers:["imei":"80bfc6e10a24a6827f974acc3f282d4e1a2c25e4","seed":"25316011","version":"V2R20A20P1"])
+//            .responseJSON { response in
+//                print(response.request)  // original URL request
+//                print(response.result)   // result of response serialization
+//                
+//                if let JSON = response.result.value {
+//                    print("JSON: \(JSON)")
+//                }
+//        }
         self.navigationController?.navigationBarHidden = true
         reloadSoure()
         tableview!.registerNib(UINib.init(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier:"Cell" )
