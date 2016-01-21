@@ -1,22 +1,52 @@
 PODS:
   - Alamofire (3.1.4)
+  - BRYXBanner (0.5.2):
+    - BRYXBanner/Core (= 0.5.2)
+  - BRYXBanner/Core (0.5.2)
+  - CryptoSwift (0.2.2)
+  - CVCalendar (1.2.8)
+  - Realm (0.97.0):
+    - Realm/Headers (= 0.97.0)
+  - Realm/Headers (0.97.0)
   - SwiftyJSON (2.3.2)
+  - TTReflect (0.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
+  - BRYXBanner (from `https://github.com/bryx-inc/BRYXBanner`)
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
+  - CVCalendar (~> 1.2.8)
+  - Realm (~> 0.97.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TTReflect (~> 0.2.0)
 
 EXTERNAL SOURCES:
+  BRYXBanner:
+    :git: https://github.com/bryx-inc/BRYXBanner
+  CryptoSwift:
+    :branch: master
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  BRYXBanner:
+    :commit: 8befdb24eda657931e05c95b6bbb79c7b3a83e95
+    :git: https://github.com/bryx-inc/BRYXBanner
+  CryptoSwift:
+    :commit: 8679ad09c1e84da099076596b0715c7ec376f7dc
+    :git: https://github.com/krzyzanowskim/CryptoSwift
   SwiftyJSON:
     :commit: 929539eb6a3304eaa9153ca44041a78b85bf2ee5
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  BRYXBanner: 5f0911d52e0a77e088f7ea7ddcdebd02afb7828a
+  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
+  CVCalendar: b7eda65b57b7ca6efae7c3d123a163882b3a3595
+  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TTReflect: 3ef4507917599f6242695fdeaa7139660d9dc2b2
 
 COCOAPODS: 0.39.0

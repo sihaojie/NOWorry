@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import BRYXBanner
 
 class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableview: UITableView!
@@ -41,7 +42,7 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
     */
     
     func reloadSoure(){
-            let path: String! = NSBundle.mainBundle().pathForResource("MenuList", ofType: "plist")
+            let path: String! = Shj_mainPath("MenuList", withtype: "plist")
             sourceArray = NSMutableArray(contentsOfFile: path)
     }
     
@@ -83,7 +84,9 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             default:
                 break
         }
-        
+        let banner = Banner(title: "Image Notification", subtitle: "Here's a great image notification.", image: UIImage(named: "Icon"), backgroundColor: UIColor(red:48.00/255.0, green:174.0/255.0, blue:51.5/255.0, alpha:1.000))
+        banner.dismissesOnTap = true
+        banner.show(duration: 3.0)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,39 +115,41 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             cell.DownLine.hidden = false
         }else if sourceArray[indexPath.section].count>1 {
             if indexPath.row==0{
-            cell.UpLine.hidden = false
-            cell.Left_DownLine.hidden = false
-            cell.Right_downline.hidden = false
-            cell.DownLine.hidden = true
+                cell.UpLine.hidden = false
+                cell.Left_DownLine.hidden = false
+                cell.Right_downline.hidden = false
+                cell.DownLine.hidden = true
         }else if indexPath.row == sourceArray[indexPath.section].count - 1{
-            cell.UpLine.hidden = true
-            cell.Left_DownLine.hidden = true
-            cell.Right_downline.hidden = true
-            cell.DownLine.hidden = false
+                cell.UpLine.hidden = true
+                cell.Left_DownLine.hidden = true
+                cell.Right_downline.hidden = true
+                cell.DownLine.hidden = false
         }else{
-            cell.UpLine.hidden = true
-            cell.Left_DownLine.hidden = false
-            cell.Right_downline.hidden = false
-            cell.DownLine.hidden = true
+                cell.UpLine.hidden = true
+                cell.Left_DownLine.hidden = false
+                cell.Right_downline.hidden = false
+                cell.DownLine.hidden = true
             }
-            }
-            cell.left_logo!.image = UIImage(named:(sourceArray[indexPath.section][indexPath.row]["LeftIcon"] as! NSString) as String)
-            cell.right_logo!.image = UIImage(named:(sourceArray[indexPath.section][indexPath.row]["RightIcon"] as! NSString) as String)
-            cell.left_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftTitle"] as! NSString) as String
-            cell.right_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightTitle"] as! NSString) as String
-            cell.left_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftRemark"] as! NSString) as String
-            cell.right_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightRemark"] as! NSString) as String
-            
-            cell.left_button.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
-            cell.right_button!.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
-            return cell;
+        }
+        
+        cell.left_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row]["LeftIcon"] as! NSString) as String, withtype: "png"))
+        cell.right_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row]["RightIcon"] as! NSString) as String, withtype: "png"))
+
+        cell.left_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftTitle"] as! NSString) as String
+        cell.right_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightTitle"] as! NSString) as String
+        cell.left_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftRemark"] as! NSString) as String
+        cell.right_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightRemark"] as! NSString) as String
+        
+        cell.left_button.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
+        cell.right_button!.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
+        return cell;
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
             return 64.0
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let view:UIImageView = UIImageView.init(frame: CGRectMake(0.0, 0.0, self.view.bounds.size.width,30.0*self.view.bounds.size.width/320.0))
-            view.image = UIImage.init(named:NSString.init(format:"First_section%d",section) as String)
+            view.image = UIImage.init(contentsOfFile: Shj_mainPath(NSString.init(format:"First_section%d",section) as String, withtype: "png"))
             return view
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

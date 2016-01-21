@@ -9,7 +9,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BRYXBanner-BRYXBanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BRYXBanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,25 +44,55 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TTReflect.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0FC40F3D69310DA1FAD79EA6A51DB8C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37D2AA999B11E7394ED241ABBFB90E6F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57CFC4DF5A94826729A3A532FC59EE52</key>
+		<key>5407A69A9968A17357A239BF4FD5B36E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8972D1B3785A7CF11C5D31FB702BCB0E</key>
+		<key>75AEEEFD7E431013E8E60009251D5797</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA5783E1E72DAF034F5567D9F2721A2E</key>
+		<key>813F196B4E1A54505BB8B389DB1ED153</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7A1BEC792292CD59DA83CED91062106</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E45C60E65DC7B25E659C0A735F907FC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

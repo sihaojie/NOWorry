@@ -13,5 +13,6 @@ public protocol ShjDelegate:NSObjectProtocol{
 }
 public protocol SHJRequestDelegate:NSObjectProtocol{
     func  requestFail(error:NSError,with tag:Int)
+    func  requestFinishedNOresult(with message:String,and tag:Int)
     func  requestFinished(result:JSON,with tag:Int)
 }

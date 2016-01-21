@@ -12,7 +12,6 @@ class ShjSegmentView: UIView {
     @IBOutlet weak var Left_button: UIButton!
     @IBOutlet weak var Right_button: UIButton!
     weak  var delegate: ShjDelegate!
-
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

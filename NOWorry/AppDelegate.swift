@@ -8,10 +8,11 @@
 
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 
+let LOGINTAG = 1
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate,SHJRequestDelegate {
 
     var window: UIWindow?
@@ -20,15 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SHJRequestDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 //        SHJRequest().requestLoginwith(withUN: "", andPS: "", withDelegate: self, With:LOGINTAG)
-        SHJRequest().requestLogin(self,With:LOGINTAG)
+        weak var s_delegate = self
+        s_request.requestLoginwith(withUN: "13923735854", andPS: "123456",anddata:"{\"userid\":\"\",\"channelid\":\"\",\"devicetype\":\"4\"}", withDelegate:s_delegate, With: LOGINTAG)
+
         return true
     }
     func requestFinished(result: JSON,with tag:Int) {
-        login_Result.nickname = result["nickname"].string
-        print(login_Result.nickname)
+        print(result);
+        if tag == 1{
+            if result["code"].intValue == 100{
+                
+            }else{
+                
+            }
+        }
     }
     func requestFail(error: NSError, with tag: Int) {
         
+    }
+
+    func requestFinishedNOresult(with message: String, and tag: Int) {
+
     }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
