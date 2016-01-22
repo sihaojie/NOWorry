@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/CVCalendar.framework"
   install_framework "Pods/CryptoSwift.framework"
   install_framework "Pods/Realm.framework"
+  install_framework "Pods/RealmSwift.framework"
   install_framework "Pods/SwiftyJSON.framework"
   install_framework "Pods/TTReflect.framework"
 fi
@@ -98,6 +99,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/CVCalendar.framework"
   install_framework "Pods/CryptoSwift.framework"
   install_framework "Pods/Realm.framework"
+  install_framework "Pods/RealmSwift.framework"
   install_framework "Pods/SwiftyJSON.framework"
   install_framework "Pods/TTReflect.framework"
 fi

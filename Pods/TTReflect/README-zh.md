@@ -11,7 +11,13 @@
 
 ```
 platform :ios, '8.0'
-pod 'TTReflect', '~> 0.1.0'
+use_frameworks!
+pod 'TTReflect', '~> 0.2.0'
+```
+
+需要导入框架
+```
+import TTReflect
 ```
 =======
 
@@ -31,6 +37,8 @@ class Tag: NSObject {
 
 **2.Int等基本属性不可以使用可选类型**
 
+**3.数字等基本类型可以使用NSNumber**
+
 ####关键方法
 ![Alt text](http://7xq01t.com1.z0.glb.clouddn.com/TTReflect_main_function-zh.png)
 
@@ -44,12 +52,6 @@ class Tag: NSObject {
 let book = Reflect.model(bookData, type: Book.self)
 ```
 
-![enter image description here](http://7xq01t.com1.z0.glb.clouddn.com/tsusolo.com/qiniumodel_basic.png)
-#####字典数组转模型数组
-######指定需要转换的json或data，并指定转换的模型数组内的元素类型
-```
-let book = Reflect.model(bookData, type: Book.self)
-```
 ![enter image description here](http://7xq01t.com1.z0.glb.clouddn.com/tsusolo.com/qiniumodel_basic.png)
 #####字典数组转模型数组
 ######指定需要转换的json或data，并指定转换的模型数组内的元素类型
