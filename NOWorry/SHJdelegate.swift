@@ -8,8 +8,8 @@
 
 import Foundation
 import SwiftyJSON
-public protocol ShjDelegate:NSObjectProtocol{
-    func  segmentSelectSendBack(index:Int)
+public protocol SHJSelectDelegate:NSObjectProtocol{
+    func  SHJSelectSendBack(index:Int)
 }
 public protocol SHJRequestDelegate:NSObjectProtocol{
     func  requestFail(error:NSError,with tag:Int)

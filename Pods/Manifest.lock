@@ -36,7 +36,7 @@ CHECKOUT OPTIONS:
     :commit: 8befdb24eda657931e05c95b6bbb79c7b3a83e95
     :git: https://github.com/bryx-inc/BRYXBanner
   CryptoSwift:
-    :commit: 4fffb43a747bbbab9ead09b9f65c8224c76720c7
+    :commit: 7a9e60395d0a0cc102bda9453797035369927254
     :git: https://github.com/krzyzanowskim/CryptoSwift
   SwiftyJSON:
     :commit: 929539eb6a3304eaa9153ca44041a78b85bf2ee5

@@ -107,8 +107,8 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             return 3;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell:HomeTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:  indexPath) as! HomeTableViewCell
-            if sourceArray[indexPath.section].count == 1{
+        let cell:HomeTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:  indexPath) as! HomeTableViewCell
+        if sourceArray[indexPath.section].count == 1{
             cell.UpLine.hidden = false
             cell.Left_DownLine.hidden = true
             cell.Right_downline.hidden = true
@@ -132,16 +132,38 @@ class FirstViewController: UIViewController,UITableViewDataSource,UITableViewDel
             }
         }
         
-        cell.left_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row]["LeftIcon"] as! NSString) as String, withtype: "png"))
-        cell.right_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row]["RightIcon"] as! NSString) as String, withtype: "png"))
+        cell.left_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row].objectForKey("LeftIcon") as! NSString) as String, withtype: "png"))
+        cell.right_logo!.image = UIImage.init(contentsOfFile: Shj_mainPath((sourceArray[indexPath.section][indexPath.row].objectForKey("RightIcon") as! NSString) as String, withtype: "png"))
 
-        cell.left_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftTitle"] as! NSString) as String
-        cell.right_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightTitle"] as! NSString) as String
-        cell.left_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["LeftRemark"] as! NSString) as String
-        cell.right_describelabel!.text = (sourceArray[indexPath.section][indexPath.row]["RightRemark"] as! NSString) as String
+        cell.left_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row].objectForKey("LeftTitle") as! NSString) as String
+        cell.right_titleLabel!.text = (sourceArray[indexPath.section][indexPath.row].objectForKey("RightTitle") as! NSString) as String
+        cell.left_describelabel!.text = (sourceArray[indexPath.section][indexPath.row].objectForKey("LeftRemark") as! NSString) as String
+        cell.right_describelabel!.text = (sourceArray[indexPath.section][indexPath.row].objectForKey("RightRemark") as! NSString) as String
         
         cell.left_button.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
         cell.right_button!.addTarget(self,action:Selector("jumpToNextViewController:"),forControlEvents:.TouchUpInside)
+        /*
+        let animation = CATransition()
+        animation.delegate = self;
+        
+        animation.duration = 1;
+        
+        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear);
+        
+        animation.fillMode = kCAFillModeForwards;
+        
+        animation.type = "curlDown";
+        
+        animation.subtype = kCATransitionFromRight;
+        
+        animation.startProgress = 0.0;
+        
+        animation.endProgress = 1.0;
+        
+        animation.removedOnCompletion = false;
+        cell.layer.addAnimation(animation, forKey: "animation")
+        */
+
         return cell;
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

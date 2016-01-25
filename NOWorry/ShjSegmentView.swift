@@ -11,7 +11,7 @@ import UIKit
 class ShjSegmentView: UIView {
     @IBOutlet weak var Left_button: UIButton!
     @IBOutlet weak var Right_button: UIButton!
-    weak  var delegate: ShjDelegate!
+    weak  var delegate: SHJSelectDelegate!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -40,7 +40,7 @@ class ShjSegmentView: UIView {
                 Right_button.backgroundColor = UIColor ( red: 0.2745, green: 0.4784, blue: 1.0, alpha: 1.0 )
                 Left_button.backgroundColor = UIColor.whiteColor()
             }
-            delegate.segmentSelectSendBack(sender.tag)
+            delegate.SHJSelectSendBack(sender.tag)
         }
     }
     /*
