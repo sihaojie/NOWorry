@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import CryptoSwift
 /// 请求地址前缀
 let BaseRequestURL:String = "http://web.ibumobile.com/"
 /// 请求地址后缀区
@@ -146,7 +145,7 @@ class SHJRequest: NSObject {
      - returns: 获取key值
      */
     func getSHA1Key(seed:String)->String{
-        return (seed.sha1() as NSString).substringToIndex(16)
+        return ((seed as NSString).sha1ith64Base() as NSString).substringToIndex(16)
     }
     /**
      登录账号与密码加密
