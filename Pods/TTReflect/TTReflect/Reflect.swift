@@ -9,9 +9,9 @@
 import Foundation
 
 public class Reflect {
-    public static func model<T: NSObject>(json: AnyObject?, type: T.Type) -> T? {
-        let model = T()
+    public static func model<T: NSObject>(json json: AnyObject?, type: T.Type) -> T {
         if let _ = json {
+            let model = T()
             if json is NSDictionary {
                 model.setProperty(json)
                 return model
@@ -19,11 +19,11 @@ public class Reflect {
                 debugPrint("error: reflect model need a dictionary json")
             }
         }
-        return nil
+        return T()
     }
-    public static func model<T: NSObject>(data: NSData?, type: T.Type) -> T? {
-        let model = T()
+    public static func model<T: NSObject>(data data: NSData?, type: T.Type) -> T {
         if let _ = data {
+            let model = T()
             do {
                 let json : AnyObject! = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                 if json is NSDictionary {
@@ -36,9 +36,9 @@ public class Reflect {
                 debugPrint("Serializat json error, \(error)")
             }
         }
-        return nil
+        return T()
     }
-    public static func model<T: NSObject>(plistName: String?, type: T.Type) -> T? {
+    public static func model<T: NSObject>(plistName: String?, type: T.Type) -> T {
         let plistPath = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
         if let _ = plistPath {
             let plistUrl = NSURL.fileURLWithPath(plistPath!)
@@ -51,12 +51,12 @@ public class Reflect {
         } else {
             debugPrint("error plist name")
         }
-        return nil
+        return T()
     }
     // reflect model array
-    public static func modelArray<T: NSObject>(json: AnyObject?, type: T.Type) -> [T]? {
-        var modelArray = [T]()
+    public static func modelArray<T: NSObject>(json json: AnyObject?, type: T.Type) -> [T] {
         if let _ = json {
+            var modelArray = [T]()
             if json is NSArray {
                 for jsonObj in json as! NSArray {
                     let model = T()
@@ -69,11 +69,11 @@ public class Reflect {
             }
             
         }
-        return nil
+        return [T]()
     }
-    public static func modelArray<T: NSObject>(data: NSData?, type: T.Type) -> [T]? {
-        var modelArray = [T]()
+    public static func modelArray<T: NSObject>(data data: NSData?, type: T.Type) -> [T] {
         if let _ = data {
+            var modelArray = [T]()
             do {
                 let json: AnyObject! = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                 if json is NSArray {
@@ -90,9 +90,9 @@ public class Reflect {
                 debugPrint("Serializat json error, \(error)")
             }
         }
-        return nil
+        return [T]()
     }
-    public static func modelArray<T: NSObject>(plistName: String?, type: T.Type) -> [T]? {
+    public static func modelArray<T: NSObject>(plistName: String?, type: T.Type) -> [T] {
         let plistPath = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist")
         if let _ = plistPath {
             let json = NSArray(contentsOfURL: NSURL.fileURLWithPath(plistPath!))
@@ -108,7 +108,7 @@ public class Reflect {
         } else {
             debugPrint("error plist name")
         }
-        return nil
+        return [T]()
     }
 }
 
@@ -126,22 +126,36 @@ extension NSObject: TTReflectProtocol {
         var replacePropertyName: [String: String]?
         var replaceObjectClass: [String: String]?
         var replaceElementClass: [String: String]?
-        if self.respondsToSelector("setupReplacePropertyName") {
-            let res = self.performSelector("setupReplacePropertyName")
+        if self.respondsToSelector(#selector(TTReflectProtocol.setupReplacePropertyName)) {
+            let res = self.performSelector(#selector(TTReflectProtocol.setupReplacePropertyName))
             replacePropertyName = res.takeUnretainedValue() as? [String: String]
         }
-        if self.respondsToSelector("setupReplaceObjectClass") {
-            let res = self.performSelector("setupReplaceObjectClass")
+        if self.respondsToSelector(#selector(TTReflectProtocol.setupReplaceObjectClass)) {
+            let res = self.performSelector(#selector(TTReflectProtocol.setupReplaceObjectClass))
             replaceObjectClass = res.takeUnretainedValue() as? [String: String]
         }
-        if self.respondsToSelector("setupReplaceElementClass") {
-            let res = self.performSelector("setupReplaceElementClass")
+        if self.respondsToSelector(#selector(TTReflectProtocol.setupReplaceElementClass)) {
+            let res = self.performSelector(#selector(TTReflectProtocol.setupReplaceElementClass))
             replaceElementClass = res.takeUnretainedValue() as? [String: String]
         }
         
-        let mirror = Mirror(reflecting: self)
-        for item in mirror.children {
-            let key = item.label!
+        var keys = [String]()
+        
+        if #available(iOS 8.0, *) {
+            let mirror = Mirror(reflecting: self)
+            for item in mirror.children {
+                keys.append(item.label!)
+            }
+        } else {
+            var propNum: UInt32 = 0
+            let propList = class_copyPropertyList(self.classForCoder, &propNum)
+            for index in 0..<numericCast(propNum) {
+                let prop: objc_property_t = propList[index]
+                keys.append(String(UTF8String: property_getName(prop))!)
+            }
+        }
+        
+        for key in keys {
             if let value =  json!.valueForKey(key) as? NSNull {
                 debugPrint("The key \(key) value is \(value)")
             } else {

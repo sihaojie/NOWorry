@@ -7,10 +7,11 @@
 //
 
 import UIKit
+
 import SwiftyJSON
 import TTReflect
 import RealmSwift
-import CVCalendar
+
 
 class reportItem:Object{
     var id: CLongLong = 0
@@ -44,31 +45,29 @@ class reportItem:Object{
     var shareemployee: String?
 }
 
-class ReportDailyListViewController: SHJBaseViewController,SHJRequestDelegate,UITableViewDelegate,UITableViewDataSource,CVCalendarViewDelegate {
-    var calendarView: CVCalendarView!
-    var menuView: CVCalendarMenuView!
+class ReportDailyListViewController: SHJBaseViewController,SHJRequestDelegate,UITableViewDelegate,UITableViewDataSource {
+    /* var calendarView: CVCalendarView!
+    var menuView: CVCalendarMenuView! */
     var report_list:Array<reportItem>! = Array()
-    var table:UITableView!
-    var selectedDay:DayView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         Title_label.text = "工作日程"
 //        addSengmentView("自己",with: "公司")
 //        Mysegment.delegate = self
-        table = UITableView.init(frame: CGRectMake(0,80, Window_width, Window_height-80))
+        /* table = UITableView.init(frame: CGRectMake(0,80, Window_width, Window_height-80))
         table.showsHorizontalScrollIndicator = false
-        table.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.view.addSubview(table)
+        table.separatorStyle = UITableViewCellSeparatorStyle.None */
         weak var s_delegate = self;
         s_request.request(withURL: reportdailyList, withParams: ["currentpage":"1","keyword":"2016-01-18"], withKeyArr: ["username","currentpage","keyword"], withDelegate:s_delegate, With: 1)
         print(s_request.username)
         table.registerNib(UINib.init(nibName: "dailyListCell", bundle: nil), forCellReuseIdentifier:"Cell" )
         table.delegate = self
         table.dataSource = self
+        /*Right_button.setTitle("查询", forState: UIControlState.Normal);
         calendarView = CVCalendarView.init(frame: CGRectMake(0, 64.0, Window_width,16))
         calendarView.delegate = self
-        self.view.addSubview(calendarView)
+        self.view.addSubview(calendarView) */
         
         // Do any additional setup after loading the view.
     }
@@ -88,7 +87,7 @@ class ReportDailyListViewController: SHJBaseViewController,SHJRequestDelegate,UI
     func requestFinished(result:JSON, with tag: Int) {
         if result["code"].intValue == 100{
             report_list.removeAll()
-            report_list.appendContentsOf(Reflect.modelArray(result["dailyreports"].arrayObject, type: reportItem.self)!)
+            report_list.appendContentsOf(Reflect.modelArray(json: result["dailyreports"].arrayObject, type: reportItem.self))
             let realm = try! Realm()
             print(realm.path)
             try! realm.write {
@@ -116,7 +115,7 @@ class ReportDailyListViewController: SHJBaseViewController,SHJRequestDelegate,UI
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80.0
     }
-    func presentationMode() -> CalendarMode {
+    /* func presentationMode() -> CalendarMode {
         return .MonthView
     }
     
@@ -254,8 +253,10 @@ class ReportDailyListViewController: SHJBaseViewController,SHJRequestDelegate,UI
         }
         
         return false
+    } */
+    func rightAction(sender: UIButton) {
+        
     }
-
     /*
     // MARK: - Navigation
 

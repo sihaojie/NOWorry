@@ -1,46 +1,54 @@
 PODS:
-  - Alamofire (3.1.5)
+  - Alamofire (3.0.1)
   - BRYXBanner (0.5.2):
     - BRYXBanner/Core (= 0.5.2)
   - BRYXBanner/Core (0.5.2)
-  - CVCalendar (1.2.8)
-  - Realm (0.97.0):
-    - Realm/Headers (= 0.97.0)
-  - Realm/Headers (0.97.0)
-  - RealmSwift (0.97.0):
-    - Realm (= 0.97.0)
+  - CVCalendar (1.2.9)
+  - ImageLoader (0.8.9)
+  - Realm (0.97.1):
+    - Realm/Headers (= 0.97.1)
+  - Realm/Headers (0.97.1)
+  - RealmSwift (0.97.1):
+    - Realm (= 0.97.1)
   - SwiftyJSON (2.3.2)
-  - TTReflect (0.2.1)
+  - TTReflect (1.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
+  - Alamofire (~> 3.0.0)
   - BRYXBanner (from `https://github.com/bryx-inc/BRYXBanner`)
   - CVCalendar (~> 1.2.8)
+  - ImageLoader
   - RealmSwift (~> 0.97.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-  - TTReflect (~> 0.2.0)
+  - TTReflect (from `https://github.com/TifaTsubasa/TTReflect.git`)
 
 EXTERNAL SOURCES:
   BRYXBanner:
     :git: https://github.com/bryx-inc/BRYXBanner
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  TTReflect:
+    :git: https://github.com/TifaTsubasa/TTReflect.git
 
 CHECKOUT OPTIONS:
   BRYXBanner:
     :commit: 8befdb24eda657931e05c95b6bbb79c7b3a83e95
     :git: https://github.com/bryx-inc/BRYXBanner
   SwiftyJSON:
-    :commit: 929539eb6a3304eaa9153ca44041a78b85bf2ee5
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  TTReflect:
+    :commit: 0e88a7965bb6eda6d173723a2b8968a0e26fc794
+    :git: https://github.com/TifaTsubasa/TTReflect.git
 
 SPEC CHECKSUMS:
-  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
   BRYXBanner: 5f0911d52e0a77e088f7ea7ddcdebd02afb7828a
-  CVCalendar: b7eda65b57b7ca6efae7c3d123a163882b3a3595
-  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
-  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
+  CVCalendar: 0799256e0bc3b43e83b7e86c0729ce9ff0624cb6
+  ImageLoader: 7a26b4e248aa4cae7df322449ddb109bcfba9f09
+  Realm: 6854f49cc788171573a0605fe5e55d3224bc39f9
+  RealmSwift: 21aa38ae5210a8e7d3ca2fd02a0ce82476672101
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  TTReflect: a9e82755cf26300a0de9af06aeeaace4f7fbb9b2
+  TTReflect: edf381e0e911770d3225bf290fac3d79f0471dd7
 
 COCOAPODS: 0.39.0

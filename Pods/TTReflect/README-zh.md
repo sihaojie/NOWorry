@@ -1,6 +1,15 @@
 #TTReflect
 ####swift版 json转model 框架
 
+### 更新记录
+
+#### 1.1.0
+###### 修复了在iOS 7下运行`Mirror(reflecting: self)`崩溃的问题
+
+#### 1.0.0
+###### 1.更新方法名称
+###### 2.更改在原数据错误时，默认返回空对象而不是nil，避免在未对可选对象解析时的空对象崩溃
+
 ###安装
 ####iOS 7
 #####手动导入
@@ -12,7 +21,7 @@
 ```
 platform :ios, '8.0'
 use_frameworks!
-pod 'TTReflect', '~> 0.2.0'
+pod 'TTReflect', '~> 1.1.0'
 ```
 
 需要导入框架
@@ -22,25 +31,27 @@ import TTReflect
 =======
 
 
-###使用
-####模型要求
+### 使用
+#### 推荐模型样式
 
 ```
 class Tag: NSObject {
     var count: Int = 0
-    var name: String?
-    var title: String?
+    var name: String = ""
+    var title: String = ""
+    var isOpen: Bool = false
 }
 ```
+> 推荐所有的属性都使用默认值，能够避免在原始数据错误时，过多的可选判断或空对象崩溃
 
 **1.模型需要继承于NSObject**
 
-**2.Int等基本属性不可以使用可选类型**
+**2.Int等基本属性需要设置默认值**
 
-**3.数字等基本类型可以使用NSNumber**
+**3.对象属性可以使用可选类型**
 
 ####关键方法
-![Alt text](http://7xq01t.com1.z0.glb.clouddn.com/TTReflect_main_function-zh.png)
+![Alt text](http://7xq01t.com1.z0.glb.clouddn.com/reflect_method_name.png)
 
 ####实例
 **具体见代码示例**
@@ -49,14 +60,16 @@ class Tag: NSObject {
 ######指定需要转换的json或data，并指定转换的模型类型
 
 ```
-let book = Reflect.model(bookData, type: Book.self)
+let book = Reflect.model(data: bookData, type: Book.self)
+let book = Reflect.model(json: bookJson, type: Book.self)
 ```
 
 ![enter image description here](http://7xq01t.com1.z0.glb.clouddn.com/tsusolo.com/qiniumodel_basic.png)
 #####字典数组转模型数组
 ######指定需要转换的json或data，并指定转换的模型数组内的元素类型
 ```
-let casts = Reflect.modelArray(castsData, type: Cast.self)
+let casts = Reflect.modelArray(data: castsData, type: Cast.self)
+let casts = Reflect.modelArray(json: castsJson, type: Cast.self)
 ```
 
 ![enter image description here](http://7xq01t.com1.z0.glb.clouddn.com/tsusolo.com/qiniumodel_array_basic.png)
@@ -96,18 +109,18 @@ func setupReplaceElementClass() -> [String : String] {
 ####完整模型演示
 ```
 class Book: NSObject {
-    var tt: String?
-    var pubdate: String?
-    var image: String?
-    var binding: String?
-    var pages: String?
-    var alt: String?
-    var id: String?
-    var publisher: String?
-    var summary: String?
-    var price: String?
-    var images: Images?
-    var tags: Array<Tag>?
+    var tt: String = ""
+    var pubdate: String = ""
+    var image: String = ""
+    var binding: String = ""
+    var pages: String = ""
+    var alt: String = ""
+    var id: String = ""
+    var publisher: String = ""
+    var summary: String = ""
+    var price: String = ""
+    var images: Images()
+    var tags = [Tag]()
 
     func setupReplacePropertyName() -> [String : String] {
         return ["title": "tt"]

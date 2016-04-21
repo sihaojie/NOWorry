@@ -14,7 +14,7 @@ class SHJTabbarViewController: UITabBarController,SHJSelectDelegate {
     var customTabbar:SHJTabbarView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        customTabbar = NSBundle.mainBundle().loadNibNamed("SHJTabbarView", owner: nil, options: nil).first as? SHJTabbarView
+        /* customTabbar = NSBundle.mainBundle().loadNibNamed("SHJTabbarView", owner: nil, options: nil).first as? SHJTabbarView
         self.tabBar.hidden = true
         self.view.addSubview(customTabbar!)
         customTabbar?.delegate = self
@@ -26,7 +26,7 @@ class SHJTabbarViewController: UITabBarController,SHJSelectDelegate {
         bgview.addGestureRecognizer(tap)
         bgview.hidden = true
         scview =  NSBundle.mainBundle().loadNibNamed("SHJshortcutsView", owner: nil, options: nil).first as? SHJshortcutsView
-        self.view.addSubview(scview)
+        self.view.addSubview(scview) */
         
         // Do any additional setup after loading the view.
     }

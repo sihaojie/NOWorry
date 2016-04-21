@@ -12,8 +12,6 @@
 		DF6483CB1C4BB45A0040136A /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6483C71C4BB45A0040136A /* NSString+AESCrypt.m */; };
 		DF6483CC1C4BB45A0040136A /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6483C91C4BB45A0040136A /* NSData+AESCrypt.m */; };
 		DF6483CF1C4BCAB60040136A /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6483CD1C4BCAB60040136A /* OpenUDID.m */; };
-		DF70686B1C4E29AB000A9861 /* icon_back_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF7068691C4E29AB000A9861 /* icon_back_normal@2x.png */; };
-		DF70686C1C4E29AB000A9861 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70686A1C4E29AB000A9861 /* icon_back@2x.png */; };
 		DF7068B11C4E2AF6000A9861 /* fp_analysis.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70689D1C4E2AF6000A9861 /* fp_analysis.png */; };
 		DF7068B21C4E2AF6000A9861 /* fp_attendance.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70689E1C4E2AF6000A9861 /* fp_attendance.png */; };
 		DF7068B31C4E2AF6000A9861 /* fp_background.png in Resources */ = {isa = PBXBuildFile; fileRef = DF70689F1C4E2AF6000A9861 /* fp_background.png */; };
@@ -49,6 +47,13 @@
 		DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF712F2E1C45F4F800916E6B /* MenuList.plist */; };
 		DF7AEC231C47ADE000AA2E06 /* SHJRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */; };
 		DF8510F61C4895C900A95CF9 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8510F41C4895C900A95CF9 /* LoginResult.swift */; };
+		DF958C931CC47F6400EA21DE /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF958C911CC47F6400EA21DE /* icon_back@2x.png */; };
+		DF958C941CC47F6400EA21DE /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF958C921CC47F6400EA21DE /* menu@2x.png */; };
+		DF958C9C1CC4862200EA21DE /* SHJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF958C9A1CC4862200EA21DE /* SHJBaseViewController.swift */; };
+		DF958C9D1CC4862200EA21DE /* SHJBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF958C9B1CC4862200EA21DE /* SHJBaseViewController.xib */; };
+		DFDA0CDC1CBE67D800C9C491 /* ContanctCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA0CDA1CBE67D800C9C491 /* ContanctCell.swift */; };
+		DFDA0CDD1CBE67D800C9C491 /* ContanctCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFDA0CDB1CBE67D800C9C491 /* ContanctCell.xib */; };
+		DFE086281CBF488C00228253 /* SelectListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE086271CBF488C00228253 /* SelectListVC.swift */; };
 		DFE296971C51C818008BBA8B /* SHJTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE296961C51C818008BBA8B /* SHJTabbarViewController.swift */; };
 		DFE296991C51C9B0008BBA8B /* SHJTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE296981C51C9B0008BBA8B /* SHJTabbarView.swift */; };
 		DFE296A21C51CAC6008BBA8B /* SHJTabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE296A11C51CAC6008BBA8B /* SHJTabbarView.xib */; };
@@ -83,7 +88,6 @@
 		DFE296E31C52108B008BBA8B /* dailyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE296E11C52108B008BBA8B /* dailyListCell.xib */; };
 		DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */; };
 		DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B21C46279300EA9B30 /* FourthViewController.swift */; };
-		DFEF20B61C46287600EA9B30 /* SHJBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20B41C46287600EA9B30 /* SHJBaseViewController.swift */; };
 		DFEF20BC1C462B7000EA9B30 /* ReportDailyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */; };
 		DFEF20CC1C46427400EA9B30 /* ShjSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */; };
 		DFEF20CE1C46429400EA9B30 /* ShjSegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */; };
@@ -91,8 +95,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2ADC64E455EA42F085D1DBC6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		76D30ED6A85B5A9D02C8B6A7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		50E19E30047EAB9ED960FF0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6B6E26FF4D1393DBE74CB452 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8F08AB2111419AA3DAB68228 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF444F981C48CE600091589D /* SHJLETFILE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJLETFILE.swift; sourceTree = "<group>"; };
 		DF6483C71C4BB45A0040136A /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
@@ -101,8 +105,6 @@
 		DF6483CA1C4BB45A0040136A /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
 		DF6483CD1C4BCAB60040136A /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		DF6483CE1C4BCAB60040136A /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		DF7068691C4E29AB000A9861 /* icon_back_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_back_normal@2x.png"; path = "Assets.xcassets/icon_back_normal@2x.png"; sourceTree = "<group>"; };
-		DF70686A1C4E29AB000A9861 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_back@2x.png"; path = "Assets.xcassets/icon_back@2x.png"; sourceTree = "<group>"; };
 		DF70689D1C4E2AF6000A9861 /* fp_analysis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_analysis.png; sourceTree = "<group>"; };
 		DF70689E1C4E2AF6000A9861 /* fp_attendance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_attendance.png; sourceTree = "<group>"; };
 		DF70689F1C4E2AF6000A9861 /* fp_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fp_background.png; sourceTree = "<group>"; };
@@ -140,7 +142,14 @@
 		DF712F2E1C45F4F800916E6B /* MenuList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuList.plist; sourceTree = "<group>"; };
 		DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJRequest.swift; sourceTree = "<group>"; };
 		DF8510F41C4895C900A95CF9 /* LoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		DF958C911CC47F6400EA21DE /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
+		DF958C921CC47F6400EA21DE /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		DF958C9A1CC4862200EA21DE /* SHJBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJBaseViewController.swift; sourceTree = "<group>"; };
+		DF958C9B1CC4862200EA21DE /* SHJBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHJBaseViewController.xib; sourceTree = "<group>"; };
 		DF9C0D771C467AC000741F22 /* NOWorry-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NOWorry-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFDA0CDA1CBE67D800C9C491 /* ContanctCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContanctCell.swift; sourceTree = "<group>"; };
+		DFDA0CDB1CBE67D800C9C491 /* ContanctCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContanctCell.xib; sourceTree = "<group>"; };
+		DFE086271CBF488C00228253 /* SelectListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectListVC.swift; sourceTree = "<group>"; };
 		DFE296961C51C818008BBA8B /* SHJTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJTabbarViewController.swift; sourceTree = "<group>"; };
 		DFE296981C51C9B0008BBA8B /* SHJTabbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJTabbarView.swift; sourceTree = "<group>"; };
 		DFE296A11C51CAC6008BBA8B /* SHJTabbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHJTabbarView.xib; sourceTree = "<group>"; };
@@ -175,7 +184,6 @@
 		DFE296E11C52108B008BBA8B /* dailyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dailyListCell.xib; sourceTree = "<group>"; };
 		DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		DFEF20B21C46279300EA9B30 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		DFEF20B41C46287600EA9B30 /* SHJBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHJBaseViewController.swift; sourceTree = "<group>"; };
 		DFEF20BB1C462B7000EA9B30 /* ReportDailyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportDailyListViewController.swift; sourceTree = "<group>"; };
 		DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShjSegmentView.swift; sourceTree = "<group>"; };
 		DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShjSegmentView.xib; sourceTree = "<group>"; };
@@ -194,6 +202,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13802B66B1D80B3C7B5B466B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B6E26FF4D1393DBE74CB452 /* Pods.debug.xcconfig */,
+				50E19E30047EAB9ED960FF0E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1F5006BE40BBB3E5639A7ACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +308,8 @@
 		DF7068681C4E2993000A9861 /* Navgation */ = {
 			isa = PBXGroup;
 			children = (
-				DF7068691C4E29AB000A9861 /* icon_back_normal@2x.png */,
-				DF70686A1C4E29AB000A9861 /* icon_back@2x.png */,
+				DF958C911CC47F6400EA21DE /* icon_back@2x.png */,
+				DF958C921CC47F6400EA21DE /* menu@2x.png */,
 			);
 			name = Navgation;
 			sourceTree = "<group>";
@@ -303,7 +320,7 @@
 				DF712F121C45F1DE00916E6B /* NOWorry */,
 				DF712F111C45F1DE00916E6B /* Products */,
 				1F5006BE40BBB3E5639A7ACA /* Frameworks */,
-				F2A7595B84F63687DB2D82C1 /* Pods */,
+				13802B66B1D80B3C7B5B466B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,9 +335,9 @@
 		DF712F121C45F1DE00916E6B /* NOWorry */ = {
 			isa = PBXGroup;
 			children = (
+				DFE086261CBF47C200228253 /* publicClass */,
 				DF9C0D761C46793300741F22 /* Contanct */,
 				DFEF20BA1C462B1D00EA9B30 /* ReportDaily */,
-				DFEF20B81C462ADB00EA9B30 /* Base */,
 				DF712F2D1C45F4E900916E6B /* Source */,
 				DFEF20B91C462AF000EA9B30 /* Tabbar */,
 				DF712F131C45F1DE00916E6B /* AppDelegate.swift */,
@@ -350,13 +367,23 @@
 			name = Contanct;
 			sourceTree = "<group>";
 		};
+		DFE086261CBF47C200228253 /* publicClass */ = {
+			isa = PBXGroup;
+			children = (
+				DFEF20B81C462ADB00EA9B30 /* Base */,
+				DFE086271CBF488C00228253 /* SelectListVC.swift */,
+			);
+			name = publicClass;
+			sourceTree = "<group>";
+		};
 		DFEF20B81C462ADB00EA9B30 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				DF6483C61C4BB4100040136A /* Objective-C */,
-				DFEF20B41C46287600EA9B30 /* SHJBaseViewController.swift */,
 				DFEF20CB1C46427300EA9B30 /* ShjSegmentView.swift */,
 				DFEF20CD1C46429400EA9B30 /* ShjSegmentView.xib */,
+				DF958C9A1CC4862200EA21DE /* SHJBaseViewController.swift */,
+				DF958C9B1CC4862200EA21DE /* SHJBaseViewController.xib */,
 				DFEF20CF1C46695800EA9B30 /* SHJdelegate.swift */,
 				DF7AEC221C47ADE000AA2E06 /* SHJRequest.swift */,
 				DF444F981C48CE600091589D /* SHJLETFILE.swift */,
@@ -369,6 +396,8 @@
 			children = (
 				DF712F151C45F1DE00916E6B /* FirstViewController.swift */,
 				DF712F171C45F1DE00916E6B /* SecondViewController.swift */,
+				DFDA0CDA1CBE67D800C9C491 /* ContanctCell.swift */,
+				DFDA0CDB1CBE67D800C9C491 /* ContanctCell.xib */,
 				DFEF20B01C46277800EA9B30 /* ThirdViewController.swift */,
 				DFEF20B21C46279300EA9B30 /* FourthViewController.swift */,
 				DF712F291C45F4CD00916E6B /* HomeTableViewCell.xib */,
@@ -390,15 +419,6 @@
 				DFE296E11C52108B008BBA8B /* dailyListCell.xib */,
 			);
 			name = ReportDaily;
-			sourceTree = "<group>";
-		};
-		F2A7595B84F63687DB2D82C1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2ADC64E455EA42F085D1DBC6 /* Pods.debug.xcconfig */,
-				76D30ED6A85B5A9D02C8B6A7 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,7 +494,6 @@
 				DFE296B51C51CE83008BBA8B /* setting_img_normal@2x.png in Resources */,
 				DFE296D41C5200A4008BBA8B /* icon-扫一扫Highlight.png in Resources */,
 				DFE296C11C52005E008BBA8B /* pic-扫一扫.png in Resources */,
-				DF70686B1C4E29AB000A9861 /* icon_back_normal@2x.png in Resources */,
 				DFE296E31C52108B008BBA8B /* dailyListCell.xib in Resources */,
 				DF7068C21C4E2AF6000A9861 /* fp_sales.png in Resources */,
 				DF7068B51C4E2AF6000A9861 /* fp_clientele.png in Resources */,
@@ -491,17 +510,20 @@
 				DF7068B81C4E2AF6000A9861 /* fp_daily.png in Resources */,
 				DFE296D51C5200A4008BBA8B /* icon-添加好友.png in Resources */,
 				DF7068C91C4E2B13000A9861 /* First_cellBG.png in Resources */,
+				DF958C941CC47F6400EA21DE /* menu@2x.png in Resources */,
 				DFE296D01C5200A4008BBA8B /* icon-电子名片盒Highlight.png in Resources */,
 				DF7068B91C4E2AF6000A9861 /* fp_examination.png in Resources */,
 				DFE296D61C5200A4008BBA8B /* icon-添加好友Highlight.png in Resources */,
 				DF7068B61C4E2AF6000A9861 /* fp_Commodityinformation.png in Resources */,
 				DFE296B61C51CE83008BBA8B /* work_img_normal@2x.png in Resources */,
 				DF7068CC1C4E2B13000A9861 /* First_section2.png in Resources */,
+				DF958C9D1CC4862200EA21DE /* SHJBaseViewController.xib in Resources */,
 				DFE296D81C5200A4008BBA8B /* icon-我的二维码Highlight.png in Resources */,
 				DF7068B31C4E2AF6000A9861 /* fp_background.png in Resources */,
 				DF7068B41C4E2AF6000A9861 /* fp_btnHeightLight.png in Resources */,
 				DFE296BA1C51FF8B008BBA8B /* SHJshortcutsView.xib in Resources */,
 				DFE296C21C52005E008BBA8B /* pic-添加好友.png in Resources */,
+				DFDA0CDD1CBE67D800C9C491 /* ContanctCell.xib in Resources */,
 				DF712F2B1C45F4CD00916E6B /* HomeTableViewCell.xib in Resources */,
 				DFE296C01C52005E008BBA8B /* pic-电子名片.png in Resources */,
 				DF7068BB1C4E2AF6000A9861 /* fp_management.png in Resources */,
@@ -514,8 +536,8 @@
 				DFE296A21C51CAC6008BBA8B /* SHJTabbarView.xib in Resources */,
 				DF712F2F1C45F4F800916E6B /* MenuList.plist in Resources */,
 				DF7068C11C4E2AF6000A9861 /* fp_report.png in Resources */,
-				DF70686C1C4E29AB000A9861 /* icon_back@2x.png in Resources */,
 				DFE296C31C52005E008BBA8B /* pic-我的二唯码.png in Resources */,
+				DF958C931CC47F6400EA21DE /* icon_back@2x.png in Resources */,
 				DFE296B41C51CE83008BBA8B /* found_img_normal@2x.png in Resources */,
 				DF7068B21C4E2AF6000A9861 /* fp_attendance.png in Resources */,
 				DFE296D21C5200A4008BBA8B /* icon-发起聊天Highlight.png in Resources */,
@@ -584,7 +606,7 @@
 				DF7AEC231C47ADE000AA2E06 /* SHJRequest.swift in Sources */,
 				DFE296991C51C9B0008BBA8B /* SHJTabbarView.swift in Sources */,
 				DFE296B81C51FF80008BBA8B /* SHJshortcutsView.swift in Sources */,
-				DFEF20B61C46287600EA9B30 /* SHJBaseViewController.swift in Sources */,
+				DFDA0CDC1CBE67D800C9C491 /* ContanctCell.swift in Sources */,
 				DFEF20B31C46279300EA9B30 /* FourthViewController.swift in Sources */,
 				DF712F181C45F1DE00916E6B /* SecondViewController.swift in Sources */,
 				DFEF20CC1C46427400EA9B30 /* ShjSegmentView.swift in Sources */,
@@ -593,6 +615,7 @@
 				DF444F991C48CE600091589D /* SHJLETFILE.swift in Sources */,
 				DFEF20D01C46695800EA9B30 /* SHJdelegate.swift in Sources */,
 				DF6483CC1C4BB45A0040136A /* NSData+AESCrypt.m in Sources */,
+				DFE086281CBF488C00228253 /* SelectListVC.swift in Sources */,
 				DFE296E21C52108B008BBA8B /* dailyListCell.swift in Sources */,
 				DFEF20B11C46277900EA9B30 /* ThirdViewController.swift in Sources */,
 				DF712F2C1C45F4CD00916E6B /* HomeTableViewCell.swift in Sources */,
@@ -600,6 +623,7 @@
 				DF712F161C45F1DE00916E6B /* FirstViewController.swift in Sources */,
 				DF8510F61C4895C900A95CF9 /* LoginResult.swift in Sources */,
 				DFE296971C51C818008BBA8B /* SHJTabbarViewController.swift in Sources */,
+				DF958C9C1CC4862200EA21DE /* SHJBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +732,7 @@
 		};
 		DF712F251C45F1DE00916E6B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ADC64E455EA42F085D1DBC6 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6B6E26FF4D1393DBE74CB452 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -729,7 +753,7 @@
 		};
 		DF712F261C45F1DE00916E6B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76D30ED6A85B5A9D02C8B6A7 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 50E19E30047EAB9ED960FF0E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

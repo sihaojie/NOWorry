@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,SHJRequestDelegate {
         // Override point for customization after application launch.
 //        SHJRequest().requestLoginwith(withUN: "", andPS: "", withDelegate: self, With:LOGINTAG)
         weak var s_delegate = self
-        s_request.requestLoginwith(withUN: "13923735854", andPS: "123456",anddata:"{\"userid\":\"\",\"channelid\":\"\",\"devicetype\":\"4\"}", withDelegate:s_delegate, With: LOGINTAG)
+        s_request.requestLoginwith(withUN: "18588446500", andPS: "123456",anddata:"{\"userid\":\"\",\"channelid\":\"\",\"devicetype\":\"4\"}", withDelegate:s_delegate, With: LOGINTAG)
 
         return true
     }
